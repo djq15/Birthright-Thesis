@@ -1,0 +1,6 @@
+SELECT * FROM ieti_db.grades, ieti_db.login
+
+where ieti_db.login.username = ieti_db.grades.first_name and ieti_db.login.username = "Dexer";
+
+
+

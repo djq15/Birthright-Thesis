@@ -1,0 +1,15 @@
+#RewriteEngine on
+
+#RewriteCond %{REQUEST_FILENAME} !-d
+
+#RewriteCond %{REQUEST_FILENAME}\.php -f
+
+
+#<files dashannouncement.php>
+#order deny,allow
+#deny from all
+#</files>
+
+
+
+

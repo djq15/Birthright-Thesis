@@ -1,0 +1,22 @@
+Release Notes
+[June 10, 2019 6:00 PM]
+1. Dashboard - COMPLETE CORE ADMIN OVERVIEW REPORTS
+2. School Term - COMPLETE C.R.U.D. Functionalities
+3. Courses - ONLY Create, Read and Delete Functionality
+	TO FOLLOW:
+	3.1 Update Of Course Curriculums
+	3.2 CRUD OF Course Subjects
+4. Faculty Members - ONLY Read and Delete Functionality (Including Viewing of Another School Term)
+	TO FOLLOW:
+	4.1 Hiring of Old and New Faculty Members (Create Functionalities)
+	4.2 Update Functionalities
+5. Classes - ONLY Read and Delete Functionality (Including Viewing of Another School Term)
+	TO FOLLOW:
+	5.1 Adding Classes and Link to Course Subjects (Create Functionalities)
+	5.2 Update Functionalities
+6. Students - ONLY Read and Delete Functionality (Including Viewing of Another School Term)
+	TO FOLLOW:
+	6.1 Enrolling New and Old Students (Create Functionalities)
+	6.2 Update Functionalities
+	
+[June 11, 2019 6:00 PM]

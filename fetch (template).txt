@@ -1,0 +1,49 @@
+<?php
+//$connect = mysqli_connect("localhost", "root", "ieti19", "ieti_db");
+$output = '';
+if(isset($_POST["query"]))
+{
+	$search = mysqli_real_escape_string($connect, $_POST["query"]);
+	$query = "
+	SELECT * FROM subject1
+	WHERE first_name LIKE '%".$search."%'
+	";
+	
+}
+else
+{
+	$query = "SELECT * FROM subject1 ORDER BY student_id";
+	//$results = mysqli_query($db, "SELECT student_id, first_name, last_name, prelim, midterm, final FROM ieti_db.subject1, ieti_db.login where username=first_name and tag='2'");
+}
+
+$result = mysqli_query($connect, $query);
+if(mysqli_num_rows($result) > 0)
+{
+	$output .= '<div class="table-responsive">
+					<table class="table table bordered">
+						<tr>
+							<th>Customer Name</th>
+							<th>Address</th>
+							<th>City</th>
+							<th>Postal Code</th>
+							<th>Country</th>
+						</tr>';
+	while($row = mysqli_fetch_array($result))
+	{
+		$output .= '
+			<tr>
+				<td>'.$row["CustomerName"].'</td>
+				<td>'.$row["Address"].'</td>
+				<td>'.$row["City"].'</td>
+				<td>'.$row["PostalCode"].'</td>
+				<td>'.$row["Country"].'</td>
+			</tr>
+		';
+	}
+	echo $output;
+}
+else
+{
+	echo 'Data Not Found';
+}
+?>

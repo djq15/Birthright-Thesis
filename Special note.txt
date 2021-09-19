@@ -1,0 +1,14 @@
+
+** My XAMPP configuration is catered towards using gmail to send verification email to registration requests and is using my
+gmail account credentials.
+
+** Please manually change "verified" under login table in MySQL db to "1" to simulate verifying of email
+
+** I also configured my XAMPP to not show syntax warnings on the html page 
+
+** Please refer to injection/connectionTest.php for authentication to MySQL database
+(I have set password to "IETI19" and db to "birthright_db"
+
+
+
+TY =D

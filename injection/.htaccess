@@ -1,0 +1,11 @@
+
+#order deny,allow
+#deny from all
+
+
+
+#<files connectionTest.php>
+#order deny,allow
+#deny from all
+#</files>
+

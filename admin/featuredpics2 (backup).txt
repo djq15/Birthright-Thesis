@@ -1,0 +1,273 @@
+<?php
+ 
+session_start();
+$username = $_POST['username'];
+
+
+if (isset($_POST['submit'])) {
+	$file = $_FILES['file'];
+	
+	$fileName = $_FILES['file']['name'];
+	$fileTmpName = $_FILES['file']['tmp_name'];
+	$fileSize = $_FILES['file']['size'];
+	$fileError = $_FILES['file']['error'];
+	$fileType = $_FILES['file']['type'];
+	
+	$fileExt = explode('.', $fileName);
+	$fileActualExt = strtolower(end($fileExt));
+	//$file_attach = "Dexer/";
+	//$file_attach = "/";
+	$file_attach = "../dashpics/";
+	
+	//$allowed = array('jpg', 'jpeg', 'png', 'pdf', 'docx', 'txt', 'mp4', 'mp3', 'gif');
+	//if (in_array($fileActualExt, $allowed )) {
+		if ($fileError === 0) {
+			//if ($fileSize < 100000000) {
+				//ini_set('upload_max_filesize', '100M');
+				$fileNameNew = uniqid('', true).".".$fileActualExt;
+				//$fileDestination = '../dashpics/'.$fileNameNew;
+				//$fileDestination = $file_attach.$fileName;	
+				//$fileDestination = $_POST["folder"].$file_attach.$fileName;
+				//$fileDestination = $file_attach.$fileName;
+				$fileDestination = $file_attach.'PIC1';
+				$tag = "PIC1";
+				move_uploaded_file($fileTmpName, $fileDestination);
+				//header("location: ../../clearanceactivation.php?uploadsuccess");
+				header("location: featuredpics.php");
+				//echo $_POST["folder"];
+				//echo $fileName;
+			$studentno = "7";
+			$db = mysqli_connect('localhost', 'root', 'ieti19', 'birthright_db');
+			mysqli_query($db, "UPDATE birthright_db.announcement SET line1='dashpics/".$tag."' WHERE number = '$studentno'"); //hit
+
+			//}
+			//else {
+				//echo "file must be less than 100 MB";
+			//}	
+		}	
+		else {
+			echo "error uploading file";
+			}	
+	//}	
+	
+	//else {
+		//echo "invalid file type";
+		//}
+	
+	//$fileName = $file['file']
+}
+
+if (isset($_POST['submit2'])) {
+	$file = $_FILES['file'];
+	
+	$fileName = $_FILES['file']['name'];
+	$fileTmpName = $_FILES['file']['tmp_name'];
+	$fileSize = $_FILES['file']['size'];
+	$fileError = $_FILES['file']['error'];
+	$fileType = $_FILES['file']['type'];
+	
+	$fileExt = explode('.', $fileName);
+	$fileActualExt = strtolower(end($fileExt));
+	//$file_attach = "Dexer/";
+	//$file_attach = "/";
+	$file_attach = "../dashpics/";
+	
+	//$allowed = array('jpg', 'jpeg', 'png', 'pdf', 'docx', 'txt', 'mp4', 'mp3', 'gif');
+	//if (in_array($fileActualExt, $allowed )) {
+		if ($fileError === 0) {
+			//if ($fileSize < 100000000) {
+				//ini_set('upload_max_filesize', '100M');
+				$fileNameNew = uniqid('', true).".".$fileActualExt;
+				//$fileDestination = '../dashpics/'.$fileNameNew;
+				//$fileDestination = $file_attach.$fileName;	
+				//$fileDestination = $_POST["folder"].$file_attach.$fileName;
+				//$fileDestination = $file_attach.$fileName;
+				$fileDestination = $file_attach.'PIC2';
+				$tag = "PIC2";
+				move_uploaded_file($fileTmpName, $fileDestination);
+				//header("location: ../../clearanceactivation.php?uploadsuccess");
+				header("location: featuredpics.php");
+				//echo $_POST["folder"];
+				//echo $fileName;
+			$studentno = "7";
+			$db = mysqli_connect('localhost', 'root', 'ieti19', 'birthright_db');
+			mysqli_query($db, "UPDATE birthright_db.announcement SET line2='dashpics/".$tag."' WHERE number = '$studentno'"); //hit
+
+			//}
+			//else {
+				//echo "file must be less than 100 MB";
+			//}	
+		}	
+		else {
+			echo "error uploading file";
+			}	
+	//}	
+	
+	//else {
+		//echo "invalid file type";
+		//}
+	
+	//$fileName = $file['file']
+}
+
+if (isset($_POST['submit3'])) {
+	$file = $_FILES['file'];
+	
+	$fileName = $_FILES['file']['name'];
+	$fileTmpName = $_FILES['file']['tmp_name'];
+	$fileSize = $_FILES['file']['size'];
+	$fileError = $_FILES['file']['error'];
+	$fileType = $_FILES['file']['type'];
+	
+	$fileExt = explode('.', $fileName);
+	$fileActualExt = strtolower(end($fileExt));
+	//$file_attach = "Dexer/";
+	//$file_attach = "/";
+	$file_attach = "../dashpics/";
+	
+	//$allowed = array('jpg', 'jpeg', 'png', 'pdf', 'docx', 'txt', 'mp4', 'mp3', 'gif');
+	//if (in_array($fileActualExt, $allowed )) {
+		if ($fileError === 0) {
+			//if ($fileSize < 100000000) {
+				//ini_set('upload_max_filesize', '100M');
+				$fileNameNew = uniqid('', true).".".$fileActualExt;
+				//$fileDestination = '../dashpics/'.$fileNameNew;
+				//$fileDestination = $file_attach.$fileName;	
+				//$fileDestination = $_POST["folder"].$file_attach.$fileName;
+				//$fileDestination = $file_attach.$fileName;
+				$fileDestination = $file_attach.'PIC3';
+				$tag = "PIC3";
+				move_uploaded_file($fileTmpName, $fileDestination);
+				//header("location: ../../clearanceactivation.php?uploadsuccess");
+				header("location: featuredpics.php");
+				//echo $_POST["folder"];
+				//echo $fileName;
+			$studentno = "7";
+			$db = mysqli_connect('localhost', 'root', 'ieti19', 'birthright_db');
+			mysqli_query($db, "UPDATE birthright_db.announcement SET line3='dashpics/".$tag."' WHERE number = '$studentno'"); //hit
+
+			//}
+			//else {
+				//echo "file must be less than 100 MB";
+			//}	
+		}	
+		else {
+			echo "error uploading file";
+			}	
+	//}	
+	
+	//else {
+		//echo "invalid file type";
+		//}
+	
+	//$fileName = $file['file']
+}
+
+if (isset($_POST['submit4'])) {
+	$file = $_FILES['file'];
+	
+	$fileName = $_FILES['file']['name'];
+	$fileTmpName = $_FILES['file']['tmp_name'];
+	$fileSize = $_FILES['file']['size'];
+	$fileError = $_FILES['file']['error'];
+	$fileType = $_FILES['file']['type'];
+	
+	$fileExt = explode('.', $fileName);
+	$fileActualExt = strtolower(end($fileExt));
+	//$file_attach = "Dexer/";
+	//$file_attach = "/";
+	$file_attach = "../dashpics/";
+	
+	//$allowed = array('jpg', 'jpeg', 'png', 'pdf', 'docx', 'txt', 'mp4', 'mp3', 'gif');
+	//if (in_array($fileActualExt, $allowed )) {
+		if ($fileError === 0) {
+			//if ($fileSize < 100000000) {
+				//ini_set('upload_max_filesize', '100M');
+				$fileNameNew = uniqid('', true).".".$fileActualExt;
+				//$fileDestination = '../dashpics/'.$fileNameNew;
+				//$fileDestination = $file_attach.$fileName;	
+				//$fileDestination = $_POST["folder"].$file_attach.$fileName;
+				//$fileDestination = $file_attach.$fileName;
+				$fileDestination = $file_attach.'PIC4';
+				$tag = "PIC4";
+				move_uploaded_file($fileTmpName, $fileDestination);
+				//header("location: ../../clearanceactivation.php?uploadsuccess");
+				header("location: featuredpics.php");
+				//echo $_POST["folder"];
+				//echo $fileName;
+			$studentno = "7";
+			$db = mysqli_connect('localhost', 'root', 'ieti19', 'birthright_db');
+			mysqli_query($db, "UPDATE birthright_db.announcement SET line4='dashpics/".$tag."' WHERE number = '$studentno'"); //hit
+
+			//}
+			//else {
+				//echo "file must be less than 100 MB";
+			//}	
+		}	
+		else {
+			echo "error uploading file";
+			}	
+	//}	
+	
+	//else {
+		//echo "invalid file type";
+		//}
+	
+	//$fileName = $file['file']
+}
+
+if (isset($_POST['submit5'])) {
+	$file = $_FILES['file'];
+	
+	$fileName = $_FILES['file']['name'];
+	$fileTmpName = $_FILES['file']['tmp_name'];
+	$fileSize = $_FILES['file']['size'];
+	$fileError = $_FILES['file']['error'];
+	$fileType = $_FILES['file']['type'];
+	
+	$fileExt = explode('.', $fileName);
+	$fileActualExt = strtolower(end($fileExt));
+	//$file_attach = "Dexer/";
+	//$file_attach = "/";
+	$file_attach = "../dashpics/";
+	
+	//$allowed = array('jpg', 'jpeg', 'png', 'pdf', 'docx', 'txt', 'mp4', 'mp3', 'gif');
+	//if (in_array($fileActualExt, $allowed )) {
+		if ($fileError === 0) {
+			//if ($fileSize < 100000000) {
+				//ini_set('upload_max_filesize', '100M');
+				$fileNameNew = uniqid('', true).".".$fileActualExt;
+				//$fileDestination = '../dashpics/'.$fileNameNew;
+				//$fileDestination = $file_attach.$fileName;	
+				//$fileDestination = $_POST["folder"].$file_attach.$fileName;
+				//$fileDestination = $file_attach.$fileName;
+				$fileDestination = $file_attach.'PIC5';
+				$tag = "PIC5";
+				move_uploaded_file($fileTmpName, $fileDestination);
+				//header("location: ../../clearanceactivation.php?uploadsuccess");
+				header("location: featuredpics.php");
+				//echo $_POST["folder"];
+				//echo $fileName;
+			$studentno = "7";
+			$db = mysqli_connect('localhost', 'root', 'ieti19', 'birthright_db');
+			mysqli_query($db, "UPDATE birthright_db.announcement SET line5='dashpics/".$tag."' WHERE number = '$studentno'"); //hit
+
+			//}
+			//else {
+				//echo "file must be less than 100 MB";
+			//}	
+		}	
+		else {
+			echo "error uploading file";
+			}	
+	//}	
+	
+	//else {
+		//echo "invalid file type";
+		//}
+	
+	//$fileName = $file['file']
+}
+
+
+?>
